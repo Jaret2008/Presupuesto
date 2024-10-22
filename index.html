@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Presupuesto y Ahorros</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Presupuesto y Ahorros</h1>
+        <form id="budget-form">
+            <h2>Ingresos y Gastos</h2>
+            <label for="income">Ingresa tus ingresos:</label>
+            <input type="number" id="income" placeholder="Ejemplo: 1000" required>
+
+            <label for="expenses">Ingresa tus gastos:</label>
+            <input type="number" id="expenses" placeholder="Ejemplo: 700" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Resultados</h2>
+            <div class="budget-message" id="budget-message"></div>
+            <div class="savings-tips" id="savings-tips"></div>
+            
+            <h2>Gráfico de Presupuesto</h2>
+            <div class="chart-container">
+                <canvas id="budgetChart" width="400" height="200"></canvas> <!-- Canvas para el gráfico -->
+            </div>
+        </div>
+
+        <h2>¿En qué te gustaría gastar tus ahorros a futuro?</h2>
+        <select id="future-expenses" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="Viajes">Viajes</option>
+            <option value="Educación">Educación</option>
+            <option value="Compras">Compras</option>
+            <option value="Ahorro para Emergencias">Ahorro para Emergencias</option>
+            <option value="Inversiones">Inversiones</option>
+        </select>
+        <div class="goals-display" id="goals-display"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Importar Chart.js -->
+    <script src="script.js"></script>
+</body>
+</html>
